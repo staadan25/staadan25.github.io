@@ -1,0 +1,57 @@
+<!--Every page needs the code from here-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="resources\css\style.css"><!--Every page needs this css-->
+        <link rel="stylesheet" href="resources\css\aboutus.css"><!--Put page specific css here-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" /><!--This makes it so the width is calculated properly-->
+    </head>
+    <body>
+        <script src="resources\js\sidebar.js"></script>
+        <div class="header">
+            <img id="logo" src="resources\images\isdtslogo.png"></img>
+            <a href="index.html">Home</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="aboutus.html">About Us</a>
+            <img src="resources/images/sidebar.png" id="sidebar-icon" onclick="openSidebar()"></img>
+        </div> 
+        <div id="transparent-overlay"></div><!--Used for when the sidebar is extended to block out the rest of the website-->
+        <p id="x-button" onclick="closeSidebar()">X</p>
+        <div id="sidebar-div" class="sidebar"><!--Mobile sidebar-->
+            <img id="sidebar-logo" src="resources\images\isdtslogo.png"></img>
+            <div id="bar"></div>
+            <a href="index.html">Home</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+        <div class="main">
+            <h2>About Us</h2>
+            <img src="resources\images\businessman.jpg"></img>
+            <p>We are a group of students from Gibson Ek, a Big Picture school in Issaquah, Washington. We are trying to find solutions to common school issues using technology.</p>
+            </div>
+            <div class="container">
+                <div>
+                    <h1>Kyan</h1>
+                    <img src="resources\images\businessman.jpg"></img>
+                    <p>I am a junior at Gibson Ek. I have a passion for programming, and I would like to expand my skills. In college I want to study computer science, and pursue a career in it.</p>
+                </div>
+                <div>
+                    <h1>Daniel</h1>
+                    <img src="resources\images\businessman.jpg"></img>
+                    <p>I’m a junior at Gibson Ek High School who’s interested in tech and computer engineering. I have no idea how to make a website; I think my cat hacks into my computer at night and pushes to the repository.</p>
+                </div>
+                <div>
+                    <h1>Brayden</h1>
+                    <img src="resources\images\businessman.jpg"></img>
+                    <p>I am a junior at Gibson Ek High School with skills in coding. I use these skills to create games and apps with the intent to either entertain or solve a problem. With this project, I wanted to expand my knowledge in designing a solution for a set of specific consumers with a common issue. I would like to pursue a career in game design and content creation.</p>
+                </div>    
+                <div>
+                    <h1>Nason</h1>
+                    <img src="resources\images\businessman.jpg"></img>
+                    <p>I am a sophomore at Gibson Ek. I'm new to programming, and I'm finding it interesting. I'm a natural problem-solver who wants to make an impact through coding.</p>
+                </div>
+            </div>
+    </body>
+</html>

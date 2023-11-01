@@ -1,115 +1,139 @@
-body {
+/*This file is CSS that all pages need, please put individual page css in their own file*/
+body { /*Gradient background, background-atachment means it will not scroll. Feel free to change that.*/
     background:linear-gradient(#000000,#343037);
     background-attachment: fixed;
 }
-* {
+* { /*Removes the default margin/padding*/ 
     margin: 0;
     padding: 0;
 }
-html {
+html { /*These two makes the sizing calculated right so things don't create a horizontal scroll bar*/
     box-sizing: border-box;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
-@media only screen and (max-width:899px){
-    #sidebar {
-       display:flex;
-    }
-    .header {
-        max-height: 20%;
-    }
-    .header a {
-        display:none;
-    }
-    .header h1 {
-        font-size:6vw;
-        flex-grow: 1;
-    }
-    #title-area {
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-        padding-top: 5%;
-    }
+
+/*mobile site*/
+/*Header code:*/
+.header {
+    width: 50%;
+    display: flex; /*Creates a flexbox to hold everything in the header*/ 
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2vh; /*1 vh is 1% of width*/
+    padding-bottom: 2vh;
+    max-height: 5%;
 }
-@media only screen and (min-width:900px){
-    #sidebar {
-       display:none;
+#logo{
+    width:150px;        
+    align-self: flex-start;
+    margin-right:80%;
+    display:none;
+}
+.header a {
+    color:#FFFFFF;
+    text-decoration: none; /*This removes the default link underline*/
+    font-family:Roboto;
+    flex-grow: 1;
+    padding-right:3vw;
+    font-size: 20px;
+    min-width:30%;
+    display:none;
+}
+#sidebar-icon {
+    max-width: 15%;
+    max-height: 15%;
+    align-self: center;
+    position:absolute;
+    right:2vw;
+    top:0.1vw;
+    display:block;
+}
+/*Sidebar code:*/
+.sidebar {
+    display: none;
+}
+#sidebar-div{ /*A flexbox that appears on mobile to contain what woul've been in the header*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    top:0px;
+    right:0px;
+    width:70%;
+    height:100%;
+    background-color:#80819a;
+    z-index:1; /*Z index determines what elements are in front of each other*/
+    position:fixed;
+    align-items:end;
+    /*Will add an animation later*/
+}
+#sidebar-logo{
+    width:60vw;
+    align-self: center;
+    padding-top:5vw;
+    padding-bottom: 5vw;
+}
+#bar { /*Visual divider bar*/
+    height:5px;
+    width:100%;
+    background-color: #a3a3a3;
+}
+.sidebar a { 
+    font-size: 6vw;
+    padding:30px 20px 5px 5px;
+    text-decoration: none;
+    color:#FFFFFF;
+    font-family:Roboto;
+}
+#transparent-overlay{ /*A giant, transparent box that helps seperate the sidebar from the background*/
+    width:100%;
+    height:100%;
+    opacity: 60%;
+    z-index: 1;
+    top:0px;
+    left:0px;
+    position: absolute;
+    background-color: #000000;
+    display:none;
+}
+#x-button{ /*Sidebar close*/
+    position: absolute;
+    top:20px;
+    left:12%;
+    z-index:2;
+    color:#FFFFFF;
+    font-family: Roboto;
+    font-size:10vw;
+    display: none;
+    cursor:default;
+}
+
+@media only screen and (min-width:900px){ /*Desktop version, overrides the mobile site- see "mobile first" design*/
+    .header {
+        max-width: 80%;
+        max-height: 10%;
+    }
+    #logo {
+        display:flex;
     }
     .header a {
         display:flex;
-        font-size: 20px;
     }
-    .header {
-        max-height: 10%;
+    #sidebar-icon {
+       display:none;
     }
-    .header h1 {
-        font-size: 30px;
-        flex-grow: 8;
+    .sidebar {
+        display: none;
+    }
+    #transparent-overlay{
+        display:none;
+    }
+    #x-button{
+        display: none;
     }
     #title-area {
         position:absolute;
         right: 10%;
         padding-top: 10%;
-        text-align: center;
     }
 }
-@media only screen and (max-width:374px){
-    h2 {
-        font-size: 60px;
-    }
-    h3 {
-        font-size: 30px;
-    }
-}
-@media only screen and (min-width:375px){
-    h2 {
-        font-size: 80px;
-    }
-    h3 {
-        font-size: 40px;
-    }
-}
-.header {
-    background-color: #000000;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-}
-.header a {
-    color:#FFFFFF;
-    text-decoration: none;
-    font-family:Roboto;
-    flex-grow: 1;
-    padding-right:3vw;
-}
-.header h1 {
-    color:#FFFFFF;
-    font-family:Roboto;
-}
-#sidebar {
-    flex-grow:1;
-    max-width: 10%;
-    max-height: 10%;
-    align-self: center;
-}
-h2 {
-    font-family: Roboto;
-    color:#80819a;
-}
-h3 {
-    font-family: Roboto;
-    color:#80819a;
-}
-#cheese{
-    max-width: 50%;
-    max-height: 50%;
-}
-

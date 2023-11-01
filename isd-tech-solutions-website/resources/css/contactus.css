@@ -1,0 +1,65 @@
+.contactus-content{
+    margin-top: 10%;
+}
+.contactus-content h1{
+    font-size: 20px;
+    color: #80819a;
+    text-align: center;
+    font-family: Roboto;
+}
+.contactus-content a{
+    color: #383a7c;
+}
+.contactus-content h2{
+    margin-top: 5%;
+    font-size: 20px;
+    color: #80819a;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Roboto;
+}
+.motherbutton {
+    background-color: black;
+    color: #80819a;
+    cursor: pointer;
+    padding: 20px;
+    width: 50%;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2.5vw;
+  }
+.panel{
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+.dropdowns{
+    text-align: center;
+    margin-top: 5%;
+    display: none;
+    text-align: center;
+}
+.childbutton{
+    background-color: black;
+    color: #d8d9ec;
+    cursor: pointer;
+    padding: 20px;
+    width: 50%;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+    font-size: 2.5vw;
+}
+.title{
+    font-size: 20px;
+    color: #80819a;
+    text-align: center;
+    font-family: Roboto;
+    margin-top: 10%
+}

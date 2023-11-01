@@ -3,16 +3,15 @@
 <html>
     <head>
         <link rel="stylesheet" href="resources\css\style.css"><!--Every page needs this css-->
-        <link rel="stylesheet" href="resources\css\home.css"><!--Put page specific css here-->
+        <link rel="stylesheet" href="resources\css\contactus.css"><!--Put page specific css here-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Neue">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1" /><!--This makes it so the width is calculated properly-->
     </head>
     <body>
         <script src="resources\js\sidebar.js"></script>
-        
         <div class="header">
-            <img id="logo" src="resources\images\isdtslogo.png"></img>
+            <img id="logo" src="resources\images\isdtslogo.png" onclick="showbutton()"></img>
             <a href="index.html">Home</a>
             <a href="contactus.html">Contact Us</a>
             <a href="aboutus.html">About Us</a>
@@ -21,16 +20,29 @@
         <div id="transparent-overlay"></div><!--Used for when the sidebar is extended to block out the rest of the website-->
         <p id="x-button" onclick="closeSidebar()">X</p>
         <div id="sidebar-div" class="sidebar"><!--Mobile sidebar-->
-            <img id="sidebar-logo" src="resources\images\isdtslogo.png"></img>
+            <img id="sidebar-logo" src="resources\images\isdtslogo.png" onclick="showbutton()"></img>
             <div id="bar"></div>
             <a href="index.html">Home</a>
             <a href="contactus.html">Contact Us</a>
             <a href="aboutus.html">About Us</a>
         </div>
-<!--To here-->
-        <div id="title-area">
-            <h2>Hello World!</h2>
-            <h3>Welcome To Our Webpage</h3>
+    </body>
+    <body>
+        <div class="title">
+            <h1>Contact Us</h1>
         </div>
     </body>
+<!--end of header-->
+        <body>
+            <div class="contactus-content">
+                <h1>Email us at: <a href = "mailto: techsolutionsgibsonek@gmail.com">techsolutionsgibsonek@gmail.com</a> </h1>
+                <!--<h2>If you have questions, check our FAQ</h2>-->
+            </div>
+            <script src="resources\js\magic_accordion.js"></script>
+            <div class ="dropdowns">
+                <button class="motherbutton" onclick="openaccordion()">Multiply me</button>
+                <div class="panel" id="buttonhouse">
+                </div>
+            </div>
+        </body>
 </html>
